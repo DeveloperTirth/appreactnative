@@ -1,0 +1,30 @@
+import { useTheme } from "@/theme/ThemeProvider";
+import React from "react";
+import { StyleProp, StyleSheet, Text, View, ViewStyle } from "react-native";
+
+type Props = {
+  title: string;
+  style?: StyleProp<ViewStyle>;
+};
+
+export const Header = ({ title , style}: Props) => {
+  const theme = useTheme();
+
+  return (
+    <View style={[styles.container, { backgroundColor: theme.colors.primary },style]}>
+      <Text style={[styles.text, { color: theme.colors.background }]}>{title}</Text>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 16,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: "700",
+  },
+});
