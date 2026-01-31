@@ -32,7 +32,7 @@ export const Button = ({
     >
       <Text
         style={[
-          { color: color ?? theme.colors.background },
+          { color: color },
           textStyle,
         ]}
       >

@@ -15,7 +15,7 @@ export const Modal = ({ visible, onClose, children, style }: Props) => {
   return (
     <RNModal transparent visible={visible} animationType="fade">
       <View style={styles.overlay}>
-        <View style={[styles.container, { backgroundColor: theme.colors.primary },style]}>
+        <View style={[styles.container, style]}>
           {children}
           <TouchableOpacity style={styles.closeButton} onPress={onClose}>
             <Text style={{ color: theme.colors.primary }}>Close</Text>

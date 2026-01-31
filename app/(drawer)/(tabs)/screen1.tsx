@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ScrollView, StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View , Text} from "react-native";
 
 import { Button } from "@/components/Button";
 import { Card } from "@/components/Card";
@@ -15,7 +15,7 @@ export default function ComponentsPreviewScreen() {
   return (
     <View style={styles.container}>
       {/* HEADER */}
-      <Header title="Components Preview" />
+      <Header  textStyle={{}}title="Components Preview" />
 
       <ScrollView
         contentContainerStyle={styles.content}
@@ -23,31 +23,27 @@ export default function ComponentsPreviewScreen() {
       >
         {/* INPUT */}
         <View style={styles.section}>
-          <Card>
             <Input
               placeholder="Type something..."
               value={inputValue}
               onChangeText={setInputValue}
             />
-          </Card>
         </View>
 
         {/* BUTTONS */}
         <View style={styles.section}>
-          <Card>
             <Button title="Primary Button" onPress={() => {}} />
             <View style={styles.spacer} />
             <Button
               title="Open Modal"
               onPress={() => setModalVisible(true)}
             />
-          </Card>
         </View>
 
         {/* CARD CONTENT */}
         <View style={styles.section}>
           <Card>
-            <Button title="Button inside Card" onPress={() => {}} />
+              <Text>text inside card!</Text>
           </Card>
         </View>
       </ScrollView>

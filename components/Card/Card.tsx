@@ -11,7 +11,7 @@ export const Card = ({ children, style }: Props) => {
   const theme = useTheme();
 
   return (
-    <View style={[styles.card, { backgroundColor: theme.colors.primary }, style]}>
+    <View style={[styles.card, style]}>
       {children}
     </View>
   );

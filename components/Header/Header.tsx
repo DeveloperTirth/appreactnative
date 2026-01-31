@@ -1,18 +1,19 @@
 import { useTheme } from "@/theme/ThemeProvider";
 import React from "react";
-import { StyleProp, StyleSheet, Text, View, ViewStyle } from "react-native";
+import { StyleProp, StyleSheet, Text, TextStyle, View, ViewStyle } from "react-native";
 
 type Props = {
   title: string;
   style?: StyleProp<ViewStyle>;
+  textStyle: StyleProp<TextStyle>;
 };
 
-export const Header = ({ title , style}: Props) => {
+export const Header = ({ title , style, textStyle}: Props) => {
   const theme = useTheme();
 
   return (
-    <View style={[styles.container, { backgroundColor: theme.colors.primary },style]}>
-      <Text style={[styles.text, { color: theme.colors.background }]}>{title}</Text>
+    <View style={[styles.container, style]}>
+      <Text style={[styles.text, textStyle]}>{title}</Text>
     </View>
   );
 };

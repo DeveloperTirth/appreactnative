@@ -11,7 +11,7 @@ export const Footer = ({ style, text }: Props) => {
   const theme = useTheme();
 
   return (
-    <View style={[styles.container, { backgroundColor: theme.colors.primary },style]}>
+    <View style={[styles.container, style]}>
       <Text style={{ color: theme.colors.text }}>{text}</Text>
     </View>
   );
